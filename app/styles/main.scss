@@ -49,6 +49,7 @@ a:focus{
     margin-top: -6%;
   }
   .kv-container{
+    background:#000;
     position:absolute;
     width:100%;
     height:100%;
@@ -121,9 +122,10 @@ a:focus{
     margin:0 auto;
     position:relative;
       width:470px;
+      height:100%;
     h3{
       position:absolute;
-      bottom:0;
+      bottom:20px;
       width:470px;
       color:#fff;
       font-weight: bold;
@@ -190,6 +192,15 @@ a:focus{
   border-top: 1px solid #e5e5e5;
 }
 
+#fullpage{
+  ul {
+    list-style: none;
+  }
+  li{
+    list-style: none;
+  }
+  @import "partial-race";  
+}
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -220,4 +231,39 @@ a:focus{
     // margin-bottom: 30px;
   }
 
+}
+
+.mejs-overlay-button {
+  background: url(../images/mejs/bigplay.svg) no-repeat;
+}
+
+.no-svg .mejs-overlay-button {
+  background-image: url(../images/mejs/bigplay.png);
+}
+
+
+.mejs-overlay-loading span {
+  background: transparent url(../images/mejs/loading.gif) 50% 50% no-repeat;
+}
+
+.mejs-controls .mejs-button button {
+  background: transparent url(../images/mejs/controls.svg) no-repeat;
+}
+
+.no-svg .mejs-controls .mejs-button button {
+  background-image: url(../images/mejs/controls.png);
+}
+.mejs-overlay-loading,
+.mejs-container .mejs-controls ,
+.mejs-controls .mejs-volume-button .mejs-volume-slider ,
+.mejs-controls .mejs-captions-button .mejs-captions-selector ,
+.mejs-captions-text,
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector,
+.mejs-postroll-layer ,
+.mejs-postroll-close ,
+.mejs-controls .mejs-speed-button .mejs-speed-selector {
+  background: url(../images/mejs/background.png);
+}
+.mejs-controls .mejs-button.mejs-skip-back-button {
+  background: transparent url(../images/mejs/skipback.png) no-repeat;
 }

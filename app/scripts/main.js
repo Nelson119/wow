@@ -17,7 +17,7 @@ $(function(){
 	    // initial volume when the player starts
 	    startVolume: 0.2,
 	    // useful for <audio> player loops
-	    loop: false,
+	    loop: true,
         ended : function(mediaElement){
         	videoSetStatus('stop',mediaElement);
         },
@@ -26,12 +26,12 @@ $(function(){
         mediaElement.addEventListener('timeupdate', function(e) {
              
            // document.getElementById('current-time').innerHTML = mediaElement.currentTime;
-           e.toString();
-           if(mediaElement.currentTime+3 > mediaElement.duration){
-           		videoSetStatus('pause',mediaElement);
-        		$('.mejs-poster mejs-layer').fadeIn();
-     			videoSetStatus('stop',mediaElement);
-           }
+        //    e.toString();
+        //    if(mediaElement.currentTime+3 > mediaElement.duration){
+        //    		videoSetStatus('pause',mediaElement);
+        // 		$('.mejs-poster mejs-layer').fadeIn();
+     			// videoSetStatus('stop',mediaElement);
+        //    }
         }, false);
          
         // call the play method
