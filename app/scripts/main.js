@@ -149,10 +149,10 @@ $(function(){
         },
         afterLoad: function(anchorLink, index){
         	var mediaElement = window.mediaElement;
-        	// if(index == 1){
+        	if(index === 1){
 		        // call the play method
 	     		videoSetStatus('play',mediaElement);
-        	// }
+        	}
         	if(index === 5){
 		        // call the play method
 		     	$('#feature').fadeTo(250,0.6);
