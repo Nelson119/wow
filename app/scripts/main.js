@@ -152,6 +152,8 @@ $(function(){
         	if(index === 1){
 		        // call the play method
 	     		videoSetStatus('play',mediaElement);
+        	}else{
+	     		videoSetStatus('pause',mediaElement);
         	}
         	if(index === 5){
 		        // call the play method
