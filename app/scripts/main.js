@@ -35,9 +35,9 @@ $(function(){
         }, false);
          
         // call the play method
-        // mediaElement.play();
-     	// videoSetStatus('play',mediaElement);
-     	// volumeSetStatus('up',mediaElement);
+        mediaElement.play();
+     	videoSetStatus('play',mediaElement);
+     	volumeSetStatus('up',mediaElement);
          
     }});
 	function videoSetStatus(stat,mediaElement){
