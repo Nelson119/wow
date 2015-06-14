@@ -1,0 +1,104 @@
+#classes{
+	background:#000;
+	nav{
+		float: left;
+		ul{
+			padding-left: 42px;
+			width:320px;
+		}
+		li{
+			display: block;
+			position: relative;
+			float: left;
+			margin-left: 10px;
+			margin-top:20px;
+			a{
+				display: block;
+				text-align: center;
+				line-height: 0.95em;
+				color: #b79855;
+				i{
+					display: block;
+					width:76px;
+					height:76px;
+					background-image: url(../images/classes/nav-buttons.png);
+				}
+			}
+			&.worrior i{
+				background-position: 0 0;	
+			}
+			&.warlock i{
+				background-position: 0 -76px;
+			}
+			&.shaman i{
+				background-position: 0 -76px*2;
+			}
+			&.rogue i{
+				background-position: 0 -76px*3;
+			}
+			&.priest i{
+				background-position: 0 -76px*4;
+			}
+			&.monk i{
+				background-position: 0 -76px*5;
+			}
+			&.paladin i{
+				background-position: 0 -76px*6;
+			}
+			&.mage i{
+				background-position: 0 -76px*7;
+			}
+			&.hunter i{
+				background-position: 0 -76px*8;
+			}
+			&.druid i{
+				background-position: 0 -76px*9;
+			}
+			&.death-knight i{
+				background-position: 0 -76px*10;
+			}
+		}
+	}
+	article{
+		float: left;
+		ul{
+			padding-left: 50px;
+			position: relative;
+		}
+		li{
+			&.active{
+				display: block;
+			}
+			display: none;
+			position:absolute;
+		}
+		figure{
+			left: 200px;
+			height: 531px;
+			line-height: 531px;
+			width: 100%;
+			img{
+				margin-top: -450px;
+			}
+			p{
+				color:#b79855;
+				font-size: 18px;
+				margin-top: 15px;
+			}
+			h4{
+				position: absolute;
+				top:295px;
+				left: 0;
+				font-size: 30px;
+				display: inline-block;
+				color:#fff;
+				margin-left: 40px;
+			}
+		}
+		p.classes-description{
+			color:#b79855;
+			width:740px;
+			font-size: 15px;
+		}
+	}
+}

@@ -18,6 +18,7 @@ body {
   padding-bottom: 20px;
   font-family:Segoe UI,微軟正黑體,Lantinghei TC;
   font-size:16px;
+  background:#000; 
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -44,17 +45,6 @@ a:focus{
     margin-bottom: 0;
     line-height: 95px;
     width:200px;
-  }
-  .mejs-container {
-    margin-top: -6%;
-  }
-  .kv-container{
-    background:#000;
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    overflow: hidden;
   }
   .center.alpha{
     height: 115px;
@@ -118,58 +108,6 @@ a:focus{
       }
     }
   }
-  .center.delta{
-    margin:0 auto;
-    position:relative;
-      width:470px;
-      height:100%;
-    h3{
-      position:absolute;
-      bottom:20px;
-      width:470px;
-      color:#fff;
-      font-weight: bold;
-      font-size: 38px;
-      text-align: center;
-      line-height: 1.6em;
-      text-shadow:1px 1px 6px rgba(0,0,0,.4);
-      .download-button{
-        display: block;
-        height: 72px;
-        overflow: hidden;
-        width: 289px;
-        margin:16px auto;
-        &:hover{
-          img{
-            margin-top: -74px;
-          }
-        }
-      }
-    }
-  }
-  .mejs-controls{
-    display: none !important;
-  }
-  .mejs-overlay-button {display:none;}
-  .video-preview{
-    width:100%;
-    position:relative;
-  }
-  .video{
-    top:0;
-    width:100%;
-    height:100%;
-    position:absolute;
-  }
-  .video-overlay{
-    position:absolute;
-    top:0;left:0;
-    height:100%;
-    width:100%;
-    @include filter-gradient(rgba(0,0,0,0), rgba(0,0,0,1), vertical);
-    $experimental-support-for-svg: true;
-    @include background-image(linear-gradient(top,  rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%));
-   }
   .nav-bg{
     width:100%;
     position:fixed;
@@ -186,10 +124,48 @@ a:focus{
 }
 
 /* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+#footer{
+  margin-top: -45%;
+  // background: url(../images/features/feature-bg.png) no-repeat center -80px;
+  article{
+    position: absolute;
+    top:620px;
+    width:100%;
+    p{
+      padding: 27px 33px;
+      width: 1069px;
+      height: 157px;
+      background-image: url(../images/features/box.png);
+      margin: 0 auto;
+      color:#b79855;
+    }
+  }
+  .footer {
+    bottom: 0;
+    color: #777;
+    padding-top: 19px;
+    position: absolute;
+    color:#593620;
+    line-height:180px;
+    height:180px;
+    width:100%;
+    .center{
+      width: 1065px;
+    }
+    a{
+      color:#fbb41c
+    }
+    p,img{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    p{
+      font-size: 12px;
+      line-height: 1.6em;
+      width: 850px;
+      padding:0 45px;
+    }
+  }
 }
 
 #fullpage{
@@ -212,7 +188,10 @@ a:focus{
   li{
     list-style: none;
   }
+  @import "partial-visual";  
   @import "partial-race";  
+  @import "partial-classes";  
+  @import "partial-features";  
 }
 .container-narrow > hr {
   margin: 30px 0;

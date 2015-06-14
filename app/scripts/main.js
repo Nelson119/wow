@@ -23,6 +23,7 @@ $(function(){
         },
 		success: function (mediaElement) { 
         // add event listener
+        window.mediaElement = mediaElement;
         mediaElement.addEventListener('timeupdate', function(e) {
              
            // document.getElementById('current-time').innerHTML = mediaElement.currentTime;
@@ -33,11 +34,13 @@ $(function(){
      			// videoSetStatus('stop',mediaElement);
         //    }
         }, false);
-         
         // call the play method
-        mediaElement.play();
-     	videoSetStatus('play',mediaElement);
-     	volumeSetStatus('up',mediaElement);
+        setTimeout(function(){
+	        mediaElement.play();
+	     	videoSetStatus('play',mediaElement);
+	     	volumeSetStatus('up',mediaElement);
+	     }, 100);
+         
          
     }});
 	function videoSetStatus(stat,mediaElement){
@@ -107,7 +110,7 @@ $(function(){
 
         //Scrolling
         css3: true,
-        scrollingSpeed: 700,
+        scrollingSpeed: 650,
         autoScrolling: true,
         fitToSection: true,
         scrollBar: true,
@@ -117,7 +120,7 @@ $(function(){
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-        normalScrollElements: '#element1, .element2',
+        normalScrollElements: '.footer',
         scrollOverflow: false,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
@@ -134,7 +137,6 @@ $(function(){
         sectionsColor : [ '#000', '#000', '#000','#000'],
         paddingTop: '3em',
         paddingBottom: '10px',
-        fixedElements: '#header, .footer',
         responsiveWidth: 0,
         responsiveHeight: 0,
 
@@ -143,8 +145,21 @@ $(function(){
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
+        onLeave: function(index, nextIndex, direction){
+        },
+        afterLoad: function(anchorLink, index){
+        	var mediaElement = window.mediaElement;
+        	// if(index == 1){
+		        // call the play method
+	     		videoSetStatus('play',mediaElement);
+        	// }
+        	if(index === 5){
+		        // call the play method
+		     	$('#feature').fadeTo(250,0.6);
+        	}else {
+		     	$('#feature').fadeTo(250,1);
+	     	}
+        },
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
@@ -155,6 +170,9 @@ $(function(){
 	});
 	$('#race .nav.nav-horde li').on('click',function(){
 		race($(this).attr('data-race'), 'horde');
+	});
+	$('#classes nav li').on('click',function(){
+		classes($(this).attr('data-classes'));
 	});
 	function race(name, alliance){
 		var content = $('#race article .'+name) ;
@@ -181,6 +199,28 @@ $(function(){
 					
 				});
 
+			}
+		});
+	}
+	function classes(name){
+		var content = $('#classes article .'+name) ;
+		TweenMax.set(content, {
+			opacity:0, 
+			display:'block'
+		});
+		TweenMax.to(content, 0.45, {
+			opacity:1, 
+			ease:Linear.easeNone
+		});
+		TweenMax.to(content.siblings(), 0.25, {
+			opacity:0, 
+			ease:Linear.easeNone,
+			onComplete:function(){
+				content.siblings().removeClass('active');
+				var btn = $('#classes nav li.' + name)
+					.addClass('active');
+				$('#classes nav li').not(btn).removeClass('active');
+				
 			}
 		});
 	}
