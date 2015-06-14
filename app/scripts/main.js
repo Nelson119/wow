@@ -35,9 +35,9 @@ $(function(){
         }, false);
          
         // call the play method
-        mediaElement.play();
-     	videoSetStatus('play',mediaElement);
-     	volumeSetStatus('up',mediaElement);
+        // mediaElement.play();
+     	// videoSetStatus('play',mediaElement);
+     	// volumeSetStatus('up',mediaElement);
          
     }});
 	function videoSetStatus(stat,mediaElement){
@@ -91,9 +91,9 @@ $(function(){
 		}
 	}
 	$(window).on('scroll resize',function(){
-		$('#fullpage').width($(window).width());
+		$('#fullpage').width($(window).width() > 1280 ? $(window).width() : 1280);
 		$('#fullpage').height($(window).height());
-		$('.video-preview').width($(window).width());
+		$('.video-preview').width($(window).width() > 1280 ? $(window).width() : 1280);
 		$('.video-preview').height($(window).height());
 	}).trigger('resize');
     $('#fullpage').fullpage({
@@ -131,7 +131,7 @@ $(function(){
         controlArrows: true,
         verticalCentered: true,
         resize : false,
-        sectionsColor : [ '#fff', '#000', '#fff','#000'],
+        sectionsColor : [ '#000', '#000', '#000','#000'],
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -150,4 +150,38 @@ $(function(){
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
+	$('#race .nav.nav-alliance li').on('click',function(){
+		race($(this).attr('data-race'), 'alliance');
+	});
+	$('#race .nav.nav-horde li').on('click',function(){
+		race($(this).attr('data-race'), 'horde');
+	});
+	function race(name, alliance){
+		var content = $('#race article .'+name) ;
+		TweenMax.set(content, {
+			opacity:0, 
+			display:'block'
+		});
+		TweenMax.to(content, 0.45, {
+			opacity:1, 
+			ease:Linear.easeNone
+		});
+		TweenMax.to(content.siblings(), 0.25, {
+			opacity:0, 
+			ease:Linear.easeNone,
+			onComplete:function(){
+				content.siblings().removeClass('active');
+				var btn = $('#race .nav.nav-'+alliance+' li.' + name)
+					.addClass('active');
+				$('#race .nav.nav-alliance li').not(btn).removeClass('active');
+				$('#race .nav.nav-horde li').not(btn).removeClass('active');
+				
+				TweenMax.set($('#race'), {
+					backgroundImage:'url(images/race/'+name.replace(/horde[-]/ig,'')+'-bg.png)'
+					
+				});
+
+			}
+		});
+	}
 });

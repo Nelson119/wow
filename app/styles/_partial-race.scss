@@ -1,3 +1,163 @@
 #race{
-	background:url(../images/race-bg.png) no-repeat;
+	background:#000;
+	background-image:url(../images/race/worgen-bg.png);
+	.nav-alliance{
+		margin:20px 0 0 65px;
+		background:url(../images/race/nav-bg-alliance.png) no-repeat;
+		li.active a,a:hover{
+			i{
+				background-image: url(../images/race/nav-hover.png);
+				background-position: 9px 8px;
+				background-repeat:no-repeat; 
+			}
+		}
+	}.nav-horde{
+		margin:20px 0 0 40px;
+		background:url(../images/race/nav-bg-horde.png) no-repeat;
+		li.active a,a:hover{
+			i{
+				background-image: url(../images/race/nav-hover.png);
+				background-position: -126px 8px;
+				background-repeat:no-repeat; 
+			}
+		}
+	}
+	.nav{
+		float: left;
+		width: 105px;
+		height:560px;
+		ul{
+		    margin: 77px auto;
+		    padding: 0;
+		    width: 65px;
+		}
+		li{
+			width: 65px;
+			height:65px;
+			display: block;
+			position:relative;
+			a{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height:100%;
+
+				i{
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height:100%;
+				}
+			}
+		}
+		li{
+			background-image: url(../images/race/nav-buttons.png);
+		}
+		.worgen{
+			background-position:0 0;
+		}
+		.draenei{
+			background-position:0 -67px;			
+		}
+		.dwarf{
+			background-position:0 -135px;
+		}
+		.gnome{
+			background-position:0 -202px;
+		}
+		.human{
+			background-position:0 -270px;
+		}
+		.night-elf{
+			background-position:0 -339px;
+		}
+
+		.goblin{
+			background-position:-135px 0;
+		}
+		.blood-elf{
+			background-position:-135px -67px;	
+		}
+		.orc{
+			background-position:-135px -135px;
+
+		}
+		.tauren{
+			background-position:-135px -202px;
+		}
+		.troll{
+			background-position:-135px -270px;
+		}
+		.undead{
+			background-position:-135px -339px;
+		}
+
+		.pandaria{
+			background-position:0 -405px;
+
+		}
+	}
+	article{
+		float: left;
+		ul{
+			padding-left: 50px;
+			position: relative;
+		}
+		li{
+			&.active{
+				display: block;
+			}
+			display: none;
+			position:absolute;
+			figure{
+				left: 200px;
+				height: 531px;
+				line-height: 531px;
+				width: 100%;
+				p{
+					color:#b79855;
+					font-size: 18px;
+					margin-top: 15px;
+				}
+				h4{
+					font-size: 30px;
+					display: inline-block;
+					color:#fff;
+					margin-left: 40px;
+					sub{
+						font-size: 18px;
+						color:#f00;
+						bottom: 0;
+						position: relative;
+						padding-left: 18px;
+						margin-left: 5px;
+						&.alliance{
+							color:#3b5998;	
+						}
+						i{
+							position:absolute;
+							width: 18px;
+							height: 100%;
+							background-position:0 center;
+							background-image:url(../images/race/alliance-horde-icon.png);	
+							top:0;
+							left:0;
+						}
+						i.horde-icon{
+							background-position:-18px center;	
+						}
+					}
+				}
+			}
+			p.race-description{
+				color:#b79855;
+				width:740px;
+				font-size: 15px;
+			}
+		}
+	}
 }
