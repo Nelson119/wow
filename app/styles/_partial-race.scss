@@ -5,6 +5,14 @@
 	}
 	background:#000;
 	background-image:url(../images/race/worgen-bg.png);
+	.bg-mask{
+	    background: #000 none repeat scroll 0 0;
+	    display: block;
+	    height: 100%;
+	    position: absolute;
+	    width: 100%;
+	    @include opacity(0);
+	}
 	.nav-alliance{
 		margin:20px 0 0 20px;
 		background:url(../images/race/nav-bg-alliance.png) no-repeat;

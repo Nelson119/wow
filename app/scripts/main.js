@@ -203,6 +203,20 @@ $(function(){
 
 			}
 		});
+		TweenMax.to($('#race .bg-mask'), 0.05, {
+			opacity:1, 
+			ease:Linear.easeNone,
+			onComplete:function(){
+				TweenMax.set($('#race'), {
+					backgroundImage:'url(images/race/'+name.replace(/horde[-]/ig,'')+'-bg.png)'
+					
+				});
+				TweenMax.to($('#race .bg-mask'), 0.45, {
+					opacity:0, 
+					ease:Linear.easeNone
+				});
+			}
+		});
 	}
 	function classes(name){
 		var content = $('#classes article .'+name) ;
