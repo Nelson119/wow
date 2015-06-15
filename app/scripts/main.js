@@ -157,9 +157,9 @@ $(function(){
         	}
         	if(index === 5){
 		        // call the play method
-		     	$('#feature').fadeTo(250,0.6);
+		     	$('#features').fadeTo(250,0.45);
         	}else {
-		     	$('#feature').fadeTo(250,1);
+		     	$('#features').fadeTo(250,1);
 	     	}
         },
         afterRender: function(){},
@@ -191,7 +191,7 @@ $(function(){
 			ease:Linear.easeNone,
 			onComplete:function(){
 				content.siblings().removeClass('active');
-				var btn = $('#race .nav.nav-'+alliance+' li.' + name)
+				var btn = $('#race .nav.nav-'+alliance+' li.' + name.replace(/horde[-]/ig,''))
 					.addClass('active');
 				$('#race .nav.nav-alliance li').not(btn).removeClass('active');
 				$('#race .nav.nav-horde li').not(btn).removeClass('active');

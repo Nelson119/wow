@@ -126,8 +126,9 @@ a:focus{
 
 /* Custom page footer */
 #footer{
-  margin-top: -45%;
-  // background: url(../images/features/feature-bg.png) no-repeat center -80px;
+  margin-top: -40.3%;
+  // background: url(../images/features/feature-bg.png) no-repeat center -80px;  
+
   article{
     position: absolute;
     top:620px;
@@ -142,6 +143,10 @@ a:focus{
     }
   }
   .footer {
+    .horizon{
+      top:-21px;
+    }
+    overflow: hidden;
     bottom: 0;
     color: #777;
     background:#000;
@@ -172,7 +177,7 @@ a:focus{
 
 #fullpage{
   margin-top: -1px;
-  h2{
+  h3{
     color: #fff;
     display: inline-block;
     font-size: 38px;
@@ -194,6 +199,13 @@ a:focus{
   @import "partial-race";  
   @import "partial-classes";  
   @import "partial-features";  
+  .horizon{
+    position: absolute;
+    bottom:-23px;
+    left:0;
+    width: 100%;
+    min-width: 1280px;
+  }
 }
 .container-narrow > hr {
   margin: 30px 0;

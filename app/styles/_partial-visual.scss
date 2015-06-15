@@ -1,8 +1,14 @@
 #visual{
   position:relative;
   min-width: 1280px;
+  background-image: url(../images/visual/visual-bg.png);
+  background-position:center bottom;
+  background-repeat: no-repeat;
   .mejs-container {
     margin-top: -6%;
+  }
+  .horizon{
+    bottom:38px;
   }
   .kv-container{
     background:#000;
