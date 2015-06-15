@@ -85,7 +85,7 @@
 			line-height: 531px;
 			width: 100%;
 			img{
-				margin-top: -450px;
+				margin-top: -350px;
 			}
 			p{
 				color:#b79855;
@@ -94,7 +94,7 @@
 			}
 			h4{
 				position: absolute;
-				top:295px;
+				top:335px;
 				left: 0;
 				font-size: 30px;
 				display: inline-block;
@@ -109,6 +109,10 @@
 			color:#b79855;
 			width:740px;
 			font-size: 15px;
+			line-height: 1.2em;
+			@media (max-width: 1024px) and (min-width: 768px) {    
+				width:400px;
+			}
 		}
 	}
 }
