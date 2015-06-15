@@ -17,6 +17,9 @@
 	p.feature-description{
 		padding: 27px 33px;
 		width: 1069px;
+		@media (max-width: 1024px) and (min-width: 768px) {
+			width: 90%;
+		}
 		height: 157px;
 		background-image: url(../images/features/box.png);
 		margin: 0 auto;

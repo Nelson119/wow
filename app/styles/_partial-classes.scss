@@ -1,6 +1,12 @@
 #classes{
+	@media (max-width: 1024px) and (min-width: 768px) {
+		overflow: hidden;
+	}
 	background:#000;
 	nav{
+		@media (max-width: 1024px) and (min-width: 768px) {    
+			transform: scale(0.7) translateY(-27%)translateX(-6%);
+		}
 		float: left;
 		ul{
 			padding-left: 42px;
@@ -93,6 +99,9 @@
 				display: inline-block;
 				color:#fff;
 				margin-left: 40px;
+				@media (max-width: 1024px) and (min-width: 768px) {    
+					transform: translateY(-100%);
+				}
 			}
 		}
 		p.classes-description{

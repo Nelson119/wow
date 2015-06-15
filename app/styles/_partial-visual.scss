@@ -1,6 +1,14 @@
 #visual{
   position:relative;
   min-width: 1280px;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    width: 100%;
+    max-width:1024px;
+    min-width: 768px;
+    h3{
+      top:30%;
+    }
+  }
   background-image: url(../images/visual/visual-bg.png);
   background-position:center bottom;
   background-repeat: no-repeat;

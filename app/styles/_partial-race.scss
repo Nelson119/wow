@@ -23,6 +23,9 @@
 		}
 	}
 	.nav{
+		@media (max-width: 1024px) and (min-width: 768px) {
+		    transform: scale(0.5) translateY(-50%);
+		}
 		float: left;
 		width: 105px;
 		height:560px;
@@ -114,6 +117,15 @@
 			display: none;
 			position:absolute;
 			figure{
+				img{
+					@media (max-width: 1024px) and (min-width: 768px) {
+					    transform: scale(0.8) translateY(-20%) translateX(-30%);
+					}
+
+				}
+				@media (max-width: 1024px) and (min-width: 768px) {
+					width: 120%;
+				}
 				left: 200px;
 				height: 531px;
 				line-height: 531px;
@@ -125,6 +137,9 @@
 					margin-top: 15px;
 				}
 				h4{
+					@media (max-width: 1024px) and (min-width: 768px) {
+					    transform: translateY(-25%);
+					}
 					font-size: 30px;
 					display: inline-block;
 					color:#fff;
@@ -157,6 +172,12 @@
 			p.race-description{
 				color:#b79855;
 				width:740px;
+				@media (max-width: 1024px) and (min-width: 768px) {
+				    left: 131px;
+				    position: absolute;
+				    top: 240px;
+				    width: 310px;
+				}
 				font-size: 15px;
 			}
 		}
