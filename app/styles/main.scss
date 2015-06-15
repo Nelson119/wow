@@ -39,6 +39,10 @@ a:focus{
   border-bottom: 1px solid #e5e5e5;
   position:relative;
   min-width: 1280px;
+  @media (max-width: 1024px) and (min-width: 768px) {
+    max-width:1024px;
+    min-width: 768px;
+  }
   /* Make the masthead heading the same height as the navigation */
   h1 {
     position: relative;
@@ -212,7 +216,11 @@ a:focus{
 }
 
 .center{
+  @media (max-width: 1024px) and (min-width: 768px) {
+    max-width:1024px;
+  }
   max-width:1200px;
+
   margin:0 auto;
   position: relative;
 }
