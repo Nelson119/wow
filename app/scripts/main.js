@@ -167,13 +167,13 @@ $(function(){
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
-	$('#race .nav.nav-alliance li').on('click',function(){
+	$('#race .nav.nav-alliance li').on('mouseover',function(){
 		race($(this).attr('data-race'), 'alliance');
 	});
-	$('#race .nav.nav-horde li').on('click',function(){
+	$('#race .nav.nav-horde li').on('mouseover',function(){
 		race($(this).attr('data-race'), 'horde');
 	});
-	$('#classes nav li').on('click',function(){
+	$('#classes nav li').on('mouseover',function(){
 		classes($(this).attr('data-classes'));
 	});
 	function race(name, alliance){
