@@ -2,7 +2,7 @@
 	background:#000;
 	background-image:url(../images/race/worgen-bg.png);
 	.nav-alliance{
-		margin:20px 0 0 65px;
+		margin:20px 0 0 20px;
 		background:url(../images/race/nav-bg-alliance.png) no-repeat;
 		li.active a,a:hover{
 			i{
@@ -12,7 +12,7 @@
 			}
 		}
 	}.nav-horde{
-		margin:20px 0 0 40px;
+		margin:20px 0 0 15px;
 		background:url(../images/race/nav-bg-horde.png) no-repeat;
 		li.active a,a:hover{
 			i{
@@ -128,7 +128,7 @@
 					font-size: 30px;
 					display: inline-block;
 					color:#fff;
-					margin-left: 40px;
+					margin-left: -160px;
 					sub{
 						font-size: 18px;
 						color:#f00;
