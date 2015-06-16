@@ -45,10 +45,14 @@
         overflow: hidden;
         width: 289px;
         margin:16px auto;
+        transition-duration:0.1s;
+        transition-property: all;
+        transition-timing-function:ease-out;
         &:hover{
-          img{
-            margin-top: -74px;
-          }
+          transition-duration:0.2s;
+          filter:invert(.1) brightness(1.1);
+          border-radius: 5px;
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
         }
       }
     }
