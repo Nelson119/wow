@@ -134,7 +134,7 @@ $(function(){
         controlArrows: true,
         verticalCentered: true,
         resize : false,
-        sectionsColor : [ '#000', '#000', '#000','#000'],
+        sectionsColor : [ '#0f0704', '#0f0704', '#0f0704','#0f0704'],
         paddingTop: '3em',
         paddingBottom: '10px',
         responsiveWidth: 0,
