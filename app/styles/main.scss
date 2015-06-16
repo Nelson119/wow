@@ -19,7 +19,7 @@ body {
   padding-bottom: 20px;
   font-family:Segoe UI,微軟正黑體,Lantinghei TC;
   font-size:16px;
-  background:#000; 
+  background:#0f0704; 
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -154,7 +154,7 @@ a:focus{
     }
 
     height: 115px;
-    background:#000;
+    background:#0f0704;
     @include opacity(0.8);
   }
   >*{
@@ -187,7 +187,7 @@ a:focus{
     overflow: hidden;
     bottom: 0;
     color: #777;
-    background:#000;
+    background:#0f0704;
     padding-top: 19px;
     position: absolute;
     color:#593620;
