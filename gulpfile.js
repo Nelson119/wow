@@ -49,7 +49,14 @@ gulp.task('html', ['styles'], function () {
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
 });
+gulp.task('clearCache', function() {
+  // Still pass the files to clear cache for
+  gulp.src('app/images/**/*')
+    .pipe($.cache.clear());
 
+  // Or, just call this for everything
+  $.cache.clearAll();
+});
 gulp.task('images', function () {
   return gulp.src('app/images/**/*')
     .pipe($.cache($.imagemin({
