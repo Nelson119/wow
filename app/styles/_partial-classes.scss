@@ -31,6 +31,25 @@
 					background-image: url(../images/classes/nav-buttons.png);
 				}
 			}
+			b{
+				width: 100%;
+				height:100%;
+				left: 0;
+				top: 0;
+				display: block;
+				position: absolute;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=);
+				cursor:pointer;
+				background-color:rgb(0,0,0);
+				@include opacity(0.3);
+				transition-duration:0.08s;
+			}
+			&.active b{
+				@include opacity(0);
+				transition-duration:0.15s;
+				transition-property:opacity;
+				transition-timing-function:ease-in;
+			}
 			&.worrior i{
 				background-position: 0 0;	
 			}
