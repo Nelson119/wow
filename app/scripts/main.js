@@ -178,6 +178,10 @@ $(function(){
 	});
 	function race(name, alliance){
 		var content = $('#race article .'+name) ;
+		var btn = $('#race .nav.nav-'+alliance+' li.' + name.replace(/horde[-]/ig,''))
+			.addClass('active');
+		$('#race .nav.nav-alliance li').not(btn).removeClass('active');
+		$('#race .nav.nav-horde li').not(btn).removeClass('active');
 		TweenMax.set(content, {
 			opacity:0, 
 			display:'block'
@@ -191,10 +195,6 @@ $(function(){
 			ease:Linear.easeNone,
 			onComplete:function(){
 				content.siblings().removeClass('active');
-				var btn = $('#race .nav.nav-'+alliance+' li.' + name.replace(/horde[-]/ig,''))
-					.addClass('active');
-				$('#race .nav.nav-alliance li').not(btn).removeClass('active');
-				$('#race .nav.nav-horde li').not(btn).removeClass('active');
 				
 				TweenMax.set($('#race'), {
 					backgroundImage:'url(images/race/'+name.replace(/horde[-]/ig,'')+'-bg.png)'
