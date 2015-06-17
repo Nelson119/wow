@@ -66,11 +66,13 @@
     position:relative;
   }
   .video{
-    top:0;
-    width:100%!important;
-    height:auto!important;
+    height: auto !important;
     min-width: 1920px;
-    position:absolute;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+    margin-left: -960px;
+    left: 50%;
   }
   .video-overlay{
     position:absolute;
