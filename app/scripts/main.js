@@ -2,7 +2,6 @@
 /* jshint devel:true, latedef:false,unused: false  */
 $(function(){
 
-
 	$('video').mediaelementplayer({
 		controls:false,
 	    features: [],
