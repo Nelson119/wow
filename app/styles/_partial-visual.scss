@@ -18,8 +18,8 @@
   .kv-container{
     background:#0f0704;
     position:absolute;
-    width:100%;
-    height:100%;
+    width:100%!important;
+    height:100%!important;
     top:0;
     overflow: hidden;
   }
@@ -67,8 +67,8 @@
   }
   .video{
     top:0;
-    width:100%;
-    height:100%;
+    width:100%!important;
+    height:100%!important;
     position:absolute;
   }
   .video-overlay{
