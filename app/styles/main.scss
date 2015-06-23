@@ -20,6 +20,10 @@ body {
   font-family:Segoe UI,微軟正黑體,Lantinghei TC;
   font-size:16px;
   background:#0f0704; 
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  font-style: normal;
+  text-rendering: optimizelegibility;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
