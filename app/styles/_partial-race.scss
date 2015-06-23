@@ -5,6 +5,7 @@
 	}
 	background:#0f0704;
 	background-image:url(../images/race/worgen-bg.png);
+	background-position: left bottom;
 	.bg-mask{
 	    background: #0f0704 none repeat scroll 0 0;
 	    display: block;
@@ -132,6 +133,7 @@
 			position:absolute;
 			figure{
 				img{
+					vertical-align: bottom;
 					@media (max-width: 1024px) and (min-width: 768px) {
 					    transform: scale(0.8) translateY(-20%) translateX(-30%);
 					}
