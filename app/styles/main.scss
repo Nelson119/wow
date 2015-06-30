@@ -34,7 +34,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+  
 a:focus{
   outline:none;
 }
@@ -98,6 +98,18 @@ a:focus{
       }
       .video-control {
         padding: 0 10px 0 35px;
+      }
+      .blood{
+        text-indent: -999em;
+        width:125px;
+        display: inline-block;
+        height: 53px;
+        vertical-align: middle;
+        background: url(../images/btn2.png) 0 0 no-repeat;
+        &:hover{
+          background: url(../images/btn2.png) 0 -53px no-repeat;
+        }
+
       }
       .btn{
         font-size: 1em;
