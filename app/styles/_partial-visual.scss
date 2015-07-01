@@ -55,21 +55,6 @@
           box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
         }
       }
-      .download-button2{
-        display: block;
-        height: 144px;
-        text-indent: -9999em;
-        width: 289px;
-        margin:0 auto;
-        transition-property: filter;
-        background: url(../images/download-button2.png) 0 0 no-repeat;
-        &:hover{
-          background: url(../images/download-button2.png) 0 -144px no-repeat;
-          box-shadow: none !important;
-          transition-duration:0.2s;
-          filter:invert(.1) brightness(1.1);
-        }
-      }
     }
   }
   .mejs-controls{

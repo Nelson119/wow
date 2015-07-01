@@ -1,7 +1,13 @@
 'use strict';
 /* jshint devel:true, latedef:false,unused: false  */
 $(function(){
-
+	$('.float-banner').stickyfloat({
+		duration : 450,
+		stickToBottom:false,
+	 	startOffset : 150,
+	 	cssTransition :true,
+	 	offsetY :150
+	});
 	$('video').mediaelementplayer({
 		controls:false,
 	    features: [],
