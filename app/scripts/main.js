@@ -1,13 +1,6 @@
 'use strict';
 /* jshint devel:true, latedef:false,unused: false  */
 $(function(){
-	$('.float-banner').stickyfloat({
-		duration : 450,
-		stickToBottom:false,
-	 	startOffset : 150,
-	 	cssTransition :true,
-	 	offsetY :150
-	});
 	$('video').mediaelementplayer({
 		controls:false,
 	    features: [],
@@ -103,6 +96,11 @@ $(function(){
 		$('#fullpage').height($(window).height());
 		$('.video-preview').width($(window).width() > 768 ? $(window).width() : 768);
 		$('.video-preview').height($(window).height());
+		TweenMax.to(
+			$('.float-banner'), 0.5, {
+			top:100 + $(window).scrollTop(), 
+			ease: Back.easeOut.config( 1)
+		});
 	}).trigger('resize');
     $('#fullpage').fullpage({
         //Navigation

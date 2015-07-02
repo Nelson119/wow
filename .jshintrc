@@ -18,6 +18,7 @@
   "jquery": true,
   "globals": {
       "TweenMax": false,
-      "Linear": false
+      "Linear": false,
+      "Back": false
   }
 }
